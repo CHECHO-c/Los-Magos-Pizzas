@@ -17,7 +17,16 @@
 
 .card{
     max-width: 250px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     
+}
+.card:hover{
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .btnAgregar{
@@ -34,7 +43,31 @@
     padding: 1%;
     flex-wrap: wrap;
 }
-
+.espacio-postres{
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 1%;
+    padding-left: 12%;
+    flex-wrap: wrap; 
+}
+.postres-parte2{
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 1%;
+    padding-left: 25%;
+    flex-wrap: wrap; 
+}
 .leerCantidad{
     padding-bottom: 5px;
+}
+
+.postresImg{
+    max-height: 30.1vh;
+    min-height: 30.1vh;
+}
+.separador{
+    border-bottom: 2px solid #ddd;
+    margin: 20px 0;
 }
