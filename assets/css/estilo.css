@@ -1,0 +1,40 @@
+
+.barraNav{
+    background-color: #f1af4f;
+    font-family: 'Bungee', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.Espacio-pizzas{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 1%;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    max-width: 250px;
+    
+}
+
+.btnAgregar{
+    background-color: #f1af4f;
+}
+
+.btnAgregar:hover{
+    background-color: #f1af4f;
+}
+.espacioRefrescos{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 1%;
+    flex-wrap: wrap;
+}
+
+.leerCantidad{
+    padding-bottom: 5px;
+}
