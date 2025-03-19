@@ -65,6 +65,21 @@ function funcionLeerProducto(cartaProducto){
 }
 
 function funcionMostrarFactura(){
+
+    if(localStorage.length==0){
+       
+        Swal.fire({
+            title: "No has selecionado ningun producto!",
+            text: "Porfavor selecione uno!",
+            icon: "error"
+          })
+          
+          
+         
+
+          
+    }
+    else{
     const textoModalMostrarFactura = document.querySelector("#textoModalMostrarFactura");
     
    for (let i=1;i<=localStorage.length;i++){ 
@@ -76,6 +91,9 @@ function funcionMostrarFactura(){
    
    }
  
+    }
+
+    
     
 }
 
@@ -136,6 +154,7 @@ botonComprar.addEventListener('click',()=>{
 modalMostrarFactura.addEventListener('hidden.bs.modal',()=>{
     textoModalMostrarFactura.innerHTML=`
    `
+   localStorage.clear();
 });
 
 
