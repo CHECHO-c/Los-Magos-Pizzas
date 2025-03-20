@@ -1,4 +1,12 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.contenido{
+    flex: 1;
+}
 .barraNav{
     background-color: #f1af4f;
     color: rgb(255, 255, 255);
@@ -9,10 +17,12 @@
 
 .Espacio-pizzas{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 1%;
     padding: 1%;
+    padding-left: 2%;
     flex-wrap: wrap;
+
     
 }
 
@@ -84,16 +94,18 @@
 }
 .espacioRefrescos{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 5%;
     padding: 1%;
+    padding-left: 6%;
     flex-wrap: wrap;
 }
 .espacio-postres{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 1%;
     padding: 1%;
+    padding-left: 1%;
     flex-wrap: wrap;
 }
 
@@ -119,9 +131,10 @@
 }
 
 footer{
-    background-color: #f1af4f;
-    color: rgb(255, 255, 255);
-    text-align: center;    
+    background: #f1af4f;
+    color: white;
+    text-align: center;
+    padding: 15px;   
 }
 footer h2{
     margin: 0;

@@ -25,21 +25,32 @@ function funcionLeerProducto(cartaProducto){
    let precioProducto = cartaProducto.childNodes[3].childNodes[5].innerText;
    let idLeerCantidad = cartaProducto.childNodes[3].childNodes[7].childNodes[3].id;
    let cantidadElegida = document.querySelector("#"+idLeerCantidad).value;
-   let i=localStorage.length;
+   if(cantidadElegida == 0 || cantidadElegida<0){
+    Swal.fire({
+        title: "La cantidad que ingresaste no es valida!",
+        text: "El producto no ha sido agregado!",
+        icon: "error"
+      });
 
-   precioProducto = precioProducto.substring(7);    
-    i++;
-   let datosProducto={
-    Producto:nombreProducto,
-    Precio:precioProducto,
-    Cantidad:cantidadElegida
    }
-   localStorage.setItem(i,JSON.stringify(datosProducto));
-   Swal.fire({
-    title: "Agregado con exito!",
-    text: "Se agrego el producto al carrito!",
-    icon: "success"
-  });
+   else{
+    let i=localStorage.length;
+
+    precioProducto = precioProducto.substring(7);    
+     i++;
+    let datosProducto={
+     Producto:nombreProducto,
+     Precio:precioProducto,
+     Cantidad:cantidadElegida
+    }
+    localStorage.setItem(i,JSON.stringify(datosProducto));
+    Swal.fire({
+     title: "Agregado con exito!",
+     text: "Se agrego el producto al carrito!",
+     icon: "success"
+   });
+   }
+   
    
 }
 
