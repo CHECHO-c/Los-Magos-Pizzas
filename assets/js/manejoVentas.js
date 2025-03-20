@@ -12,31 +12,10 @@
     const cartaPzVegetariana = document.querySelector("#cartaPzVegetariana");
     const cartaPzRanchera = document.querySelector("#cartaPzRanchera");
     
-    //Refrescos
-    const botonAgregarRfFanta = document.querySelector("#botonAgregarRfFanta");
-    const botonAgregarRfSprite = document.querySelector("#botonAgregarRfSprite");
-    const botonAgregarRfPepsi = document.querySelector("#botonAgregarRfPepsi");
-    const botonAgregarRfCoca = document.querySelector("#botonAgregarRfCoca");
-    //Cartas Refrescos
-    const cartaRfFanta = document.querySelector("#cartaRfFanta");
-    const cartaRfSprite = document.querySelector("#cartaRfSprite");
-    const cartaRfPepsi = document.querySelector("#cartaRfPepsi");
-    const cartaRfCoca = document.querySelector("#cartaRfCoca");
+   
 
-    //Postres
-    const botonAgregarPtChocolate = document.querySelector("#botonAgregarPtChocolate");
-    const botonAgregarPtCerezo = document.querySelector("#botonAgregarPtCerezo");
-    const botonAgregarPtFlan = document.querySelector("#botonAgregarPtFlan");
-    const botonAgregarPtCupcake = document.querySelector("#botonAgregarPtCupcake");
-    const botonAgregarPtVainilla = document.querySelector("#botonAgregarPtVainilla");
-    //Cartas Postres
-    const cartaPtChocolate = document.querySelector("#cartaPtChocolate");
-    const cartaPtCerezo = document.querySelector("#cartaPtCerezo");
-    const cartaPtFlan = document.querySelector("#cartaPtFlan");
-    const cartaPtCupcake = document.querySelector("#cartaPtCupcake");
-    const cartaPtVainilla = document.querySelector("#cartaPtVainilla");    
-
-    const botonComprar = document.querySelector("#botonComprar");
+    
+ 
     const modalMostrarFactura = document.querySelector("#modalMostrarFactura");
 
         
@@ -64,38 +43,6 @@ function funcionLeerProducto(cartaProducto){
    
 }
 
-function funcionMostrarFactura(){
-
-    if(localStorage.length==0){
-       
-        Swal.fire({
-            title: "No has selecionado ningun producto!",
-            text: "Porfavor selecione uno!",
-            icon: "error"
-          })
-          
-          
-         
-
-          
-    }
-    else{
-    const textoModalMostrarFactura = document.querySelector("#textoModalMostrarFactura");
-    
-   for (let i=1;i<=localStorage.length;i++){ 
-    let leerLocalStorage = JSON.parse(localStorage.getItem(i))
-    textoModalMostrarFactura.innerHTML+=`
-   <h5>Producto: ${leerLocalStorage.Producto}</h5>
-   <p>Cantidad: ${leerLocalStorage.Cantidad}</p><div class="separador"></div>
-   `
-   
-   }
- 
-    }
-
-    
-    
-}
 
  
 //Pizzas
@@ -115,47 +62,11 @@ botonAgregarPzRanchera.addEventListener('click',()=>{
     funcionLeerProducto(cartaPzRanchera); 
 });
 
-//Refrescos
-botonAgregarRfFanta.addEventListener('click',()=>{
-    funcionLeerProducto(cartaRfFanta); 
-});
-botonAgregarRfSprite.addEventListener('click',()=>{
-    funcionLeerProducto(cartaRfSprite); 
-});
-botonAgregarRfPepsi.addEventListener('click',()=>{
-    funcionLeerProducto(cartaRfPepsi); 
-});
-botonAgregarRfCoca.addEventListener('click',()=>{
-    funcionLeerProducto(cartaRfCoca); 
-});
 
-//Postres
-botonAgregarPtChocolate.addEventListener('click',()=>{
-    funcionLeerProducto(cartaPtChocolate); 
-});
-botonAgregarPtCerezo.addEventListener('click',()=>{
-    funcionLeerProducto(cartaPtCerezo); 
-});
-botonAgregarPtFlan.addEventListener('click',()=>{
-    funcionLeerProducto(cartaPtFlan); 
-});
-botonAgregarPtCupcake.addEventListener('click',()=>{
-    funcionLeerProducto(cartaPtCupcake); 
-});
-botonAgregarPtVainilla.addEventListener('click',()=>{
-    funcionLeerProducto(cartaPtVainilla); 
-});
 
-botonComprar.addEventListener('click',()=>{
-    funcionMostrarFactura();
-    // localStorage.clear();
-});
 
-modalMostrarFactura.addEventListener('hidden.bs.modal',()=>{
-    textoModalMostrarFactura.innerHTML=`
-   `
-   localStorage.clear();
-});
+
+
 
 
 
